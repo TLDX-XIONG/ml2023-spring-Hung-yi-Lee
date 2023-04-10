@@ -1,0 +1,22 @@
+basesine(simple code): (0.49736, 0.49818)
+1. get more data（when data is amount, the ratio can be set more sharp (0.9/0.1)) + weight_decay + more training time(20 epochs) -----> (0.5066, 0.5081) improve 1% 
+2. the same with 1. with a extra training time(40 epochs)   -----> (0.51906, 0.51942) improve 2%
+3. concat more frames(11), add more layers(4) and widen hidden layers(256), training more time (40epochs)   ----> (0.66126, 0.66091)
+4. more layers(6) and more width(512) compared 3.  ------>  (0.65602, 0.65554) decrease
+5. more fnames(15) than 3.  and the same with 4.   ------> (0.671, 0.67023) improved
+6. same with 5. + batchnorm before relu.   -----> (0.69412, 0.69266)
+7. the same with 6. + drop(p=0.2)    ------> (0.72156, 0.72103)
+8. the same with 7. + train more time(80 epochs)   ------> (0.72505, 0.72457)
+9. more layers(8) + more dims(1024) + 80 epochs  -----> (0.72762, 0.72766)
+10. concat more frames(19) + AdamW + Consin_scheduler  ----->(0.7465, 0.74603)
+11. more dims(1024)   ----> (0.76068, 0.76005)
+
+-----------------------------------------------------
+12. rnn(bilstm module) + more concat_frames(51)    ------> (0.82xxx, 0.82xx)
+
+
+summary：
+1. if having a amount of data, the ratio of train and validation can increase to 0.9 or even 0.95.
+2. network complexity + batchnorm + drouout(when existing dense layer)
+3. using adam or adamw + consin_scheduler
+4. replace with new network norm such as rnn instead of mlp.

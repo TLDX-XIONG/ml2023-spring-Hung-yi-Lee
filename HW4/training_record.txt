@@ -1,0 +1,5 @@
+1. transformer(head=2, layers=3, d_model=224, dim_feedforward=2*d_model, dropout=0.2), pred_layer(one layer + batchnorm) to be simple. lr=1e-3 + adamW
+2. transformer(head=4, layers=4, d_model=256, dim_feedforward=2*d_model, dropout=0.2), pred_layer(one layer + batchnorm) to be simple. lr=1e-4 + adamW
+
+
+训练transformer 学习率很重要：尽量小些(1e-4)，不然不会收敛。模型变得越大，学习率应该变小。

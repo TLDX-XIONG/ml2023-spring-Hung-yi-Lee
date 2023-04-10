@@ -1,0 +1,4 @@
+1. data augenmentation(random crop + randomflip) + adam + scheduler + 60 epochs   ----> (0.774, 0.76866)
+2. use resnet18 + more epochs  ----->  (0.78933, 0.79333)
+3. 4-fold cross validation + more augenmentation + 80 epochs(maybe little, training set is still underfit)   ------>  ()
+4. 
